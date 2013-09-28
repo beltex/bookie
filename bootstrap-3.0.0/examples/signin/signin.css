@@ -1,3 +1,4 @@
+
 body {
   padding-top: 40px;
   padding-bottom: 40px;
@@ -55,3 +56,10 @@ body {
   padding-right: 15px;
 }
 */
+
+
+.logout-btn {
+  position: relative;
+	 /*margin-top: 10px;*/
+     background-color: #ffffff; WHITE
+}
