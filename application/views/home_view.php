@@ -29,11 +29,13 @@
         <a class="navbar-brand" href="home_view.php">Omeed Safaee-Rad</a>
        
 		<!-- LOGOUT START --> 
+		<form action="login_view.php">
 		<div class="pull-right">
 			<button type="submit" class="btn btn-sm logout-btn">
 				<span class="glyphicon glyphicon-log-out"></span>
 			</button>
         </div>
+		</form>
 		<!-- LOGOUT END -->
 
       </div>
