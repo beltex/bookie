@@ -57,9 +57,9 @@ body {
 }
 */
 
-
+/* This handles the MOBILE logout ONLY */
 .logout-btn {
-  position: relative;
-	 /*margin-top: 10px;*/
+	 margin-top: 3px;
+	 margin-right: 5px;
      background-color: #ffffff; WHITE
 }

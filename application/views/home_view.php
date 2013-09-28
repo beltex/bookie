@@ -47,11 +47,7 @@
 	<!-- HEADER END -->
 
     <div class="container">
-
       <form class="form-signin">
-
-		
-		
 		<!--
 		// We don't need this if the Facebook login API has its own pop-up		
 
