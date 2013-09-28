@@ -32,7 +32,7 @@
 
 	<!-- CONTAINER START - main body -->
     <div class="container">
-      <form class="form-signin">
+      <form class="form-signin" action="home_view.php">
         <h1 class="form-signin-heading">Bookie</h1>
 		<p class="lead">[ Social Finance Tracking ]</p>
 		<button class="btn btn-lg btn-primary btn-block" type="submit">Facebook Login</button>
