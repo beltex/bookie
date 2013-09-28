@@ -6,9 +6,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<!-- FAV ICON - If we make no replacement, delete it! -->
-    <!--<link rel="shortcut icon" href="../../assets/ico/favicon.png">-->
-
     <title>Bookie</title>
 
     <!-- Bootstrap core CSS - DO NOT TOUCH THIS -->
@@ -25,7 +22,7 @@
 	<!-- HEADER START (navbar) - this will be copied for all pages -->
 	<div class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
-        <a class="navbar-brand" href="#">Bookie</a>
+        <a class="navbar-brand" href="login_view.php">Bookie</a>
       </div>
     </div>
 	<!-- HEADER END -->
