@@ -31,6 +31,7 @@
 	<!-- HEADER END -->
 
 	<!-- CONTAINER START - main body -->
+	<a href="<?= $login_url ?>">Login</a>
     <div class="container">
       <form class="form-signin" action="home_view.php">
         <h1 class="form-signin-heading">Bookie</h1>
