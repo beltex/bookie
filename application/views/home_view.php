@@ -11,8 +11,8 @@
 
     <!-- Bootstrap core CSS - DO NOT TOUCH THIS -->
     <link href="dist/css/bootstrap.css" rel="stylesheet">
-
-    <!-- Custom styles for Bookie -->
+    
+	<!-- Custom styles for Bookie -->
     <link href="bookie.css" rel="stylesheet">
   </head>
   <!-- HEAD END -->
@@ -30,9 +30,9 @@
        
 		<!-- LOGOUT START --> 
 		<div class="pull-right">
-          <ul class="nav navbar-nav" href="login_view.php">
-			<li><button type="submit" class="btn btn-sm logout-btn" href="login_view.php"><span class="glyphicon glyphicon-log-out"></span></button></li>
-          </ul>
+			<button type="submit" class="btn btn-sm logout-btn">
+				<span class="glyphicon glyphicon-log-out"></span>
+			</button>
         </div>
 		<!-- LOGOUT END -->
 

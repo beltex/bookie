@@ -28,24 +28,12 @@
 	<!-- HEADER END -->
 
 	<!-- CONTAINER START - main body -->
-	<a href="<?= $login_url ?>">Login</a>
     <div class="container">
       <form class="form-signin" action="home_view.php">
         <h1 class="form-signin-heading">Bookie</h1>
 		<p class="lead">[ Social Finance Tracking ]</p>
 		<button class="btn btn-lg btn-primary btn-block" type="submit">Facebook Login</button>
-		
-		<!--
-		// We don't need this if the Facebook login API has its own pop-up		
-
-        <input type="text" class="form-control" placeholder="Email address" autofocus>
-        <input type="password" class="form-control" placeholder="Password">
-        <label class="checkbox">
-          <input type="checkbox" value="remember-me"> Remember me
-        </label>
-		-->
       </form>
-
     </div>
 	<!-- CONTAINER END -->
 
