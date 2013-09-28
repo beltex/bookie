@@ -17,7 +17,7 @@
     <link href="dist/css/bootstrap.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="signin.css" rel="stylesheet">
+    <link href="bookie.css" rel="stylesheet">
 
   </head>
 
@@ -61,17 +61,20 @@
           <input type="checkbox" value="remember-me"> Remember me
         </label>
 		-->
-        
-        <h3 class="form-signin-heading">Your Social Bookie</h3>
-		<p class="lead"></p>
-		<button class="btn btn-lg btn-warning btn-block" type="submit">+ Add Expense</button>
-		<p class="lead"></p>
-		<p class="lead"></p>
-		<!--<span class="pull-right">&raquo;</span>-->
-		<button class="btn btn-lg btn-danger btn-block" type="submit">You Owe: $75.00 &raquo;</button>
-		<p class="lead"></p>
-		<button class="btn btn-lg btn-success btn-block text-left" type="submit">Owe You: $125.17 &raquo;</button>
-
+		<form>
+		<div class="input-group input-group-lg">
+  			<span class="input-group-addon">Event</span>
+  			<input type="text" class="form-control input-lg" placeholder="What is this expense?">
+		</div>
+		<div class="input-group input-group-lg">
+  			<span class="input-group-addon">$</span>
+  			<input type="text" class="form-control input-lg" placeholder="Amount">
+		</div>
+		<div class="input-group input-group-lg">
+  			<span class="input-group-addon">Who</span>
+  			<input type="text" class="form-control input-lg" placeholder="Who owe's you?">
+		</div>
+		</form>
       </form>
 
     </div> <!-- /container -->
