@@ -7,7 +7,6 @@
     <meta name="author" content="">
 
 	<!-- If we make no replacement, delete it! -->
-    <!--<link rel="shortcut icon" href="../../assets/ico/favicon.png">-->
 
     <title>Bookie</title>
 
@@ -15,7 +14,7 @@
 		// PROBABLY SHOULD NOT TOUCH THIS
 		Bootstrap core CSS 
 	-->
-    <link href="../../dist/css/bootstrap.css" rel="stylesheet">
+    <link href="dist/css/bootstrap.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="signin.css" rel="stylesheet">
@@ -28,15 +27,20 @@
 	<div class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <!--<div class="navbar-header">-->
-          <!--<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <!--<button type="button" class="navbar-toggle" data-target="">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>-->
         <!--</div>-->
-        <a class="navbar-brand" href="#">Bookie</a>
-          
-		  </ul>
+
+		<!-- MUST GET REAL USERNAME -->
+        <a class="navbar-brand" href="#">Omeed Safaee-Rad</a>
+        <div class="pull-right row-fluid">
+        <!--<div class="collapse navbar-collapse">-->
+          <ul class="nav navbar-nav">
+			<li><button type="button" class="btn btn-sm logout-btn"><span class="glyphicon glyphicon-log-out"></span></button></li>
+          </ul>
         </div><!--/.nav-collapse -->
       </div>
     </div>
@@ -46,8 +50,6 @@
 
       <form class="form-signin">
 
-        <h1 class="form-signin-heading">Bookie</h1>
-		<p class="lead">[ Social Finance Tracking ]</p>
 		
 		
 		<!--
@@ -59,8 +61,20 @@
           <input type="checkbox" value="remember-me"> Remember me
         </label>
 		-->
-        
-		<button class="btn btn-lg btn-primary btn-block" type="submit">Facebook Login</button>
+		<form>
+		<div class="input-group input-group-lg">
+  			<span class="input-group-addon">Event</span>
+  			<input type="text" class="form-control input-lg" placeholder="What is this expense?">
+		</div>
+		<div class="input-group input-group-lg">
+  			<span class="input-group-addon">$</span>
+  			<input type="text" class="form-control input-lg" placeholder="Amount">
+		</div>
+		<div class="input-group input-group-lg">
+  			<span class="input-group-addon">Who</span>
+  			<input type="text" class="form-control input-lg" placeholder="Who owe's you?">
+		</div>
+		</form>
       </form>
 
     </div> <!-- /container -->
