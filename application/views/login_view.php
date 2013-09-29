@@ -29,11 +29,12 @@
 
 	<!-- CONTAINER START - main body -->
     <div class="container">
-      <form class="form-signin" action="<?= $login_url ?>">
+      <form class="form-signin">
         <h1 class="form-signin-heading">Bookie</h1>
 		<p class="lead">[ Social Finance Tracking ]</p>
-		<!-- <button class="btn btn-lg btn-primary btn-block" type="submit">Facebook Login</button> -->
-		<a href="<?= $login_url ?>"> Facebook Login <a/>
+		<a class="btn btn-lg btn-primary btn-block" href="<?= $login_url ?>">
+			Facebook Login
+		<a/>
       </form>
     </div>
 	<!-- CONTAINER END -->
