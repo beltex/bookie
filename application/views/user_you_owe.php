@@ -29,7 +29,7 @@
         <a class="navbar-brand" href="../../bookie"><?php echo $user_profile['name']; ?></a>
        
 		<!-- LOGOUT START --> 
-		<form action="login_view.php">
+		<form action="#">
 		<div class="pull-right">
 			<button type="submit" class="btn btn-sm logout-btn">
 				<span class="glyphicon glyphicon-log-out"></span>
@@ -46,8 +46,7 @@
     <div class="container"><br/>
     	<h3 class="form-signin">You Owe: $<?php echo $total_owed ?> </h3>
     	
-      <form class="form-signin" action="user_add.php">
-        
+      
        <!-- Hack Alert! Pulling off a Nidale-->
       <?php foreach($people_you_owe as $people) :?>
 		<?php echo "<form class='form-signin' action='#'><button class='btn btn-lg btn-danger btn-block' type='submit' action='user_add.php'>". $people['name']  .": $".$people['totals']." &raquo;</button></form> " ?>

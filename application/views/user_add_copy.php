@@ -70,7 +70,7 @@ $(document).ready(function() {
         <a class="navbar-brand" href="../../bookie"><?php echo $user_profile['name']; ?></a>
 
         <!-- LOGOUT START -->
-        <form action="login_view.php">
+        <form action="#">
         <div class="pull-right">
             <button type="submit" class="btn btn-sm logout-btn">
                 <span class="glyphicon glyphicon-log-out"></span>
