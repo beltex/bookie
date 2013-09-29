@@ -1,91 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+  
+  <!-- HEAD START -->
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
 
-	<!-- If we make no replacement, delete it! -->
+	<!-- MUST GET REAL USERNAME -->
+    <title>Bookie // Omeed Safaee-Rad</title>
 
-    <title>Bookie</title>
-
-    <!-- 
-		// PROBABLY SHOULD NOT TOUCH THIS
-		Bootstrap core CSS 
-	-->
+	<!-- Bootstrap core CSS - DO NOT TOUCH THIS -->
     <link href="dist/css/bootstrap.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
+    
+	<!-- Custom styles for Bookie -->
     <link href="bookie.css" rel="stylesheet">
-
   </head>
+  <!-- HEAD END -->
 
+  <!-- BODY START -->
   <body>
 
-	<!-- HEADER START - this will be copied for all pages -->
-	<div class="navbar navbar-inverse navbar-fixed-top">
+    <!-- HEADER START (navbar) - this will be copied for all pages -->
+    <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
-        <!--<div class="navbar-header">-->
-          <!--<button type="button" class="navbar-toggle" data-target="">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>-->
-        <!--</div>-->
 
-		<!-- MUST GET REAL USERNAME -->
-        <a class="navbar-brand" href="#">Omeed Safaee-Rad</a>
-        <div class="pull-right row-fluid">
-        <!--<div class="collapse navbar-collapse">-->
-          <ul class="nav navbar-nav">
-			<li><button type="button" class="btn btn-sm logout-btn"><span class="glyphicon glyphicon-log-out"></span></button></li>
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div>
+        <!-- MUST GET REAL USERNAME -->
+        <!-- Always links to home_view.php -->
+        <a class="navbar-brand" href="home_view.php">Omeed Safaee-Rad</a>
+
+        <!-- LOGOUT START -->
+        <form action="login_view.php">
+        <div class="pull-right">
+            <button type="submit" class="btn btn-sm logout-btn">
+                <span class="glyphicon glyphicon-log-out"></span>
+            </button>
+        </div>
+        </form>
+        <!-- LOGOUT END -->
+     </div>
     </div>
-	<!-- HEADER END -->
+    <!-- HEADER END -->
 
+    <!-- CONTAINER START - main body -->
     <div class="container">
-
-      <form class="form-signin">
-
-		
-		
-		<!--
-		// We don't need this if the Facebook login API has its own pop-up		
-
-        <input type="text" class="form-control" placeholder="Email address" autofocus>
-        <input type="password" class="form-control" placeholder="Password">
-        <label class="checkbox">
-          <input type="checkbox" value="remember-me"> Remember me
-        </label>
-		-->
-		<form>
-		<div class="input-group input-group-lg">
+      <form class="form-signin">		
+		<p class="lead"></p>
+		<div class="input-group">
   			<span class="input-group-addon">Event</span>
-  			<input type="text" class="form-control input-lg" placeholder="What is this expense?">
-		</div>
-		<div class="input-group input-group-lg">
-  			<span class="input-group-addon">$</span>
-  			<input type="text" class="form-control input-lg" placeholder="Amount">
-		</div>
-		<div class="input-group input-group-lg">
-  			<span class="input-group-addon">Who</span>
-  			<input type="text" class="form-control input-lg" placeholder="Who owe's you?">
+  			<input type="text" class="form-control " placeholder="What's this expense?">
 		</div>
 		</form>
+      <form class="form-signin">		
+		<div class="input-group">
+  			<span class="input-group-addon">$</span>
+  			<input type="text" class="form-control " placeholder="Amount">
+		</div>
+		</form>
+      <form class="form-signin">		
+		<div class="input-group">
+  			<span class="input-group-addon">Who</span>
+  			<input type="text" class="form-control " placeholder="Who owe's you?">
+		</div>
+		</form>
+      <form class="form-signin" action="home_view.php">
+        <button class="btn btn-lg btn-warning btn-block done-btn" type="submit">Done</button>
       </form>
-
-    </div> <!-- /container -->
-
-	<!-- 
-	<div id="footer">
-      <div class="container">
-        <p class="text-muted credit">Bookie - <a href="https://github.com/beltex/bookie/">Fork Me On GitHub</a></p>
-      </div>
+      </form>
     </div>
-	-->
+    <!-- CONTAINER END -->
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
