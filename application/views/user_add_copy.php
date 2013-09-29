@@ -86,7 +86,7 @@ $(document).ready(function() {
     <div class="container">
     <form action = "../index.php/addNewExpense/addNewRecord" method="get" class="form-signin">	
       		
-		<p class="lead"></p>
+    	<h3 class="form-signin">+ Add Expense</h3>
 		<div class="input-group">
   			<span class="input-group-addon"><span style="visibility:hidden">a</span>Event<span style="visibility:hidden">@</span></span>
   			<input type="text" class="form-control " placeholder="What's this expense?" name="event">
