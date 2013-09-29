@@ -61,7 +61,7 @@
           <input type="checkbox" value="remember-me"> Remember me
         </label>
 		-->
-		<form>
+		<form >
 		<div class="input-group input-group-lg">
   			<span class="input-group-addon">Event</span>
   			<input type="text" class="form-control input-lg" placeholder="What is this expense?">
