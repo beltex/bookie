@@ -14,6 +14,9 @@
     
 	<!-- Custom styles for Bookie -->
     <link href="bookie.css" rel="stylesheet">
+
+
+
   </head>
   <!-- HEAD END -->
 
@@ -46,19 +49,19 @@
       <form class="form-signin">		
 		<p class="lead"></p>
 		<div class="input-group">
-  			<span class="input-group-addon">Event</span>
+  			<span class="input-group-addon"><span style="visibility:hidden">a</span>Event<span style="visibility:hidden">@</span></span>
   			<input type="text" class="form-control " placeholder="What's this expense?">
 		</div>
 		</form>
       <form class="form-signin">		
 		<div class="input-group">
-  			<span class="input-group-addon">$</span>
+  			<span class="input-group-addon"><span style="visibility:hidden">asd</span>$<span style="visibility:hidden">asd</span></span>
   			<input type="text" class="form-control " placeholder="Amount">
 		</div>
 		</form>
       <form class="form-signin">		
 		<div class="input-group">
-  			<span class="input-group-addon">Who</span>
+  			<span class="input-group-addon"><span style="visibility:hidden">as</span>Who<span style="visibility:hidden">.s</span></span>
   			<input type="text" class="form-control " placeholder="Who owe's you?">
 		</div>
 		</form>
