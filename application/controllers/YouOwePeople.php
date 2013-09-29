@@ -1,6 +1,6 @@
 <?php
 
-class home extends CI_Controller {
+class YouOwePeople extends CI_Controller {
 
 	function __construct() {
 		parent::__construct();
@@ -24,10 +24,18 @@ class home extends CI_Controller {
 			$data['logout_url'] = $this -> facebook -> getLogoutUrl();
 			$this->load->model('Owing');
 			$amountLended = $this->Owing->getAmountLended($data['user_profile']['id']);
-			$amountOwing = $this->Owing->getAmountOwing($data['user_profile']['id']);
-			$data['amount_lended'] = $amountLended[0]['sum'];
-			$data['amount_owing'] = $amountOwing[0]['sum'];;
-			$this -> load -> view('homePage', $data);
+			
+			$this->load->model("Owing");
+			//$data['people_owe_you'] = $this->Owing->getAmountLendedToPeople($data['user_profile']['id']);
+			
+			
+			
+			$data['people_you_owe'] = $this->Owing->getAmountOwedToPeople($data['user_profile']['id']);
+			$this->load->view("PeopleYouOwePage", $data);
+			// $amountOwing = $this->Owing->getAmountOwing($data['user_profile']['id']);
+			// $data['amount_lended'] = $amountLended[0]['sum'];
+			// $data['amount_owing'] = $amountOwing[0]['sum'];;
+			// $this -> load -> view('homePage', $data);
 			
 		} else {
 			redirect('login');
@@ -37,15 +45,5 @@ class home extends CI_Controller {
 	function addNewExpense()
 	{
 		redirect('addNewExpense');
-	}
-	
-	function PeopleOweYou()
-	{
-		redirect('PeopleOweYou');
-	}
-	
-	function YouOwePeople()
-	{
-		redirect('YouOwePeople');
 	}
 }

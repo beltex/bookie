@@ -16,24 +16,9 @@ class AddNewExpense extends CI_Controller {
 				$data['user_profile'] = $this -> facebook -> api('/me');
 				$friends = $this -> facebook -> api('/me/friends');
 				$friends = $friends['data'];
-				
-				
-				// Add All friends to database.
-				// foreach($friends as $friend) {
-					// $friendId = $friend['id'];
-					// $friendName = $friend['name'];
-					// $this->load->model('Person');
-					// $this->Person->insertRecord($friendId, $friendName);
-				// }
-				
+
 				$jsonData = json_encode($friends);
-				
-				
- 				
-				// $friendsString = sizeof($friends);
-				// foreach($friends as $friend)
-					// $friendsString = $friendsString . ":" . $friend['id'] .":" . $friend['name']; 
-				
+			
 				$data['user_friends'] = $jsonData;
 			} catch (FacebookApiException $e) {
 				$user = null;

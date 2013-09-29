@@ -33,6 +33,30 @@ class Owing extends CI_Model {
 		
 	}
 	
+	function getAmountLendedToPeople($uid){
+		
+		$q = $this->db->query("Select P.name, sum(P2.value) as totals from Person as P inner join (SELECT O.id_from, O.value from Person as P1 inner join Owing as O on P1.fb_id = O.id_to where P1.fb_id ='".$uid."') as P2 where P.fb_id = P2.id_from GROUP BY P.name");
+		if ($q->num_rows > 0) {
+			foreach ($q->result() as $row) {
+				$data[] = $row;
+			}
+		}
+		return ($this->ObjectToArray($data));	
+	}
+	
+	function getAmountOwedToPeople($uid){
+		
+		$q = $this->db->query("Select P.name, sum(P2.value) as totals from Person as P inner join (SELECT O.id_to, O.value from Person as P1 inner join Owing as O on P1.fb_id = O.id_from where P1.fb_id = '" . $uid ."') as P2 where P.fb_id = P2.id_to GROUP BY P.name");
+		if ($q->num_rows > 0) {
+			foreach ($q->result() as $row) {
+				$data[] = $row;
+			}
+		}
+		return ($this->ObjectToArray($data));	
+	}
+	
+	
+	
 	function ObjectToArray($Array){
 		for($i = 0; $i < count($Array); $i++){
 			$Array[$i] = get_object_vars($Array[$i]);
