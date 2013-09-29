@@ -59,10 +59,16 @@
 		<button class="btn btn-lg btn-warning btn-block" type="submit" >+ Add Expense</button>
       </form>
       <form class="form-signin" action="../index.php/YouOwePeople">
-		<button class="btn btn-lg btn-danger btn-block" type="submit"><span class="badge pull-right notes">7</span>You Owe: $<?php echo $amount_owing?>  &raquo;</button>
+      	<?php if($size_owed < 1) 
+      			echo "<button class='btn btn-lg btn-danger btn-block' type='submit' disabled><span class='badge pull-right notes'>$size_owed</span>You Owe: $".$amount_owing." &raquo;</button>";
+			else echo "<button class='btn btn-lg btn-danger btn-block' type='submit'><span class='badge pull-right notes'>$size_owed</span>You Owe: $".$amount_owing." &raquo;</button>";
+      	?>
 	  </form>
       <form class="form-signin" action="../index.php/PeopleOweYou">
-		<button class="btn btn-lg btn-success btn-block text-left" type="submit"><span class="badge pull-right notes">3</span>Owe You: $<?php echo $amount_lended?> &raquo;</button>
+      	<?php if($size_owed < 1) 
+				echo "<button class='btn btn-lg btn-success btn-block text-left' type='submit' disabled><span class='badge pull-right notes'> $size_lended </span>Owe You: $ $amount_lended &raquo;</button>";
+			else echo "<button class='btn btn-lg btn-success btn-block text-left' type='submit' ><span class='badge pull-right notes'> $size_lended </span>Owe You: $ $amount_lended &raquo;</button>"; 
+      	?>
       </form>
     </div>
 	<!-- CONTAINER END -->
