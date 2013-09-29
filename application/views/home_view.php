@@ -49,8 +49,13 @@
 
 	<!-- CONTAINER START - main body -->
     <div class="container">
+    	
+    	<br/>
+    	
+    	<h3 class="form-signin">Your Social Bookie</h3>
+    	
       <form class="form-signin" action="../index.php/addNewExpense">
-        <h3 class="form-signin-heading">Your Social Bookie</h3>
+        
 		<button class="btn btn-lg btn-warning btn-block" type="submit" >+ Add Expense</button>
       </form>
       <form class="form-signin" action="../index.php/YouOwePeople">
