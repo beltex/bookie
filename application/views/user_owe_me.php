@@ -44,12 +44,13 @@
 
 	<!-- CONTAINER START - main body -->
     <div class="container"> <br/>
-    <h3 class="form-signin">You Owe: $<?php echo $total_lended ?></h3>	
+    <h3 class="form-signin"> Owe You: $<?php echo $total_lended ?></h3>	
     	
     	<!-- Hack Alert! Pulling off a Nidale-->
       <?php foreach($people_owe_you as $people) :?>
-		<?php echo "<form class='form-signin' action='user_add.php'><button class='btn btn-lg btn-success btn-block' type='submit' action='user_add.php'>". $people['name']  .": $".$people['totals']." &raquo;</button></form> " ?>
+		<?php echo "<form class='form-signin' action='#'><button class='btn btn-lg btn-success btn-block' type='submit' action='user_add.php'>". $people['name']  .": $".$people['totals']." &raquo;</button></form> " ?>
 	  <?php endforeach; ?>
+	  
     </div>
 	<!-- CONTAINER END -->
 
