@@ -49,10 +49,10 @@
 		<button class="btn btn-lg btn-warning btn-block" type="submit" action="user_add.php">+ Add Expense</button>
       </form>
       <form class="form-signin" action="user_you_owe.php">
-		<button class="btn btn-lg btn-danger btn-block" type="submit">You Owe: $75.00 &raquo;</button>
-      </form>
+		<button class="btn btn-lg btn-danger btn-block" type="submit"><span class="badge pull-right notes">7</span>You Owe: $75.00 &raquo;</button>
+	  </form>
       <form class="form-signin" action="user_owe_me.php">
-		<button class="btn btn-lg btn-success btn-block text-left" type="submit">Owe You: $125.17 &raquo;</button>
+		<button class="btn btn-lg btn-success btn-block text-left" type="submit"><span class="badge pull-right notes">3</span>Owe You: $125.17 &raquo;</button>
       </form>
     </div>
 	<!-- CONTAINER END -->
