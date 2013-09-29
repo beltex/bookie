@@ -1,13 +1,12 @@
 <?php
 
-class home extends CI_Controller {
+class AddNewExpense extends CI_Controller {
 
 	function __construct() {
 		parent::__construct();
 	}
 
 	function index() {
-
 		$fb_config = array('appId' => '570515386348687', 'secret' => '844705f10757e09b10bc16ab1a3ad65e');
 		$this -> load -> library('facebook', $fb_config);
 		$user = $this -> facebook -> getUser();
@@ -15,6 +14,12 @@ class home extends CI_Controller {
 		if ($user) {
 			try {
 				$data['user_profile'] = $this -> facebook -> api('/me');
+				$friends = $this -> facebook -> api('/me/friends');
+				$friends = $friends['data'];
+				$friendsString = sizeof($friends);
+				foreach($friends as $friend)
+					$friendsString = $friendsString . ":" . $friend['id'] .":" . $friend['name']; 
+				$data['user_friends'] = $friendsString;
 			} catch (FacebookApiException $e) {
 				$user = null;
 			}
@@ -22,20 +27,12 @@ class home extends CI_Controller {
 
 		if ($user) {
 			$data['logout_url'] = $this -> facebook -> getLogoutUrl();
-			$this->load->model('Owing');
-			$amountLended = $this->Owing->getAmountLended($data['user_profile']['id']);
-			$amountOwing = $this->Owing->getAmountOwing($data['user_profile']['id']);
-			$data['amount_lended'] = $amountLended[0]['sum'];
-			$data['amount_owing'] = $amountOwing[0]['sum'];;
-			$this -> load -> view('homePage', $data);
+			$this -> load -> view('addNewExpensePage', $data);
 			
 		} else {
 			redirect('login');
 		}
 	}
 	
-	function addNewExpense()
-	{
-		redirect('addNewExpense');
-	}
 }
+

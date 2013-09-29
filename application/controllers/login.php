@@ -26,6 +26,5 @@ class Login extends CI_Controller {
 			$data['login_url'] = $this -> facebook -> getLoginUrl();
 			$this -> load -> view('loginPage', $data);
 		}
-		
 	}
 }

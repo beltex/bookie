@@ -24,6 +24,12 @@ class Owing extends CI_Model {
 		return $this->ObjectToArray($data);
 	}
 	
+	
+	function insertRecord($uid, $toId, $value)
+	{
+		$q = $this->db->query("INSERT INTO Owing (`id_from`, `id_to`, `value`, `status`, `timestamp`) VALUES ('". $uid ."', '". $toId ."', ". $value .",, '0', UNIX_TIMESTAMP())");
+	}
+	
 	function ObjectToArray($Array){
 		for($i = 0; $i < count($Array); $i++){
 			$Array[$i] = get_object_vars($Array[$i]);
