@@ -46,9 +46,6 @@
       <form class="form-signin">		
 		<p class="lead"></p>
 		<div class="input-group">
-      <form class="form-signin">
-		<form >
-		<div class="input-group">
   			<span class="input-group-addon">Event</span>
   			<input type="text" class="form-control " placeholder="What's this expense?">
 		</div>
