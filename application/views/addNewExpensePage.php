@@ -1,8 +1,11 @@
 
 
 <script type="text/javascript"> 
-var stringlist = "<?php echo $user_friends;?>";
-	alert(stringlist);
+	var stringlist = "<?php echo $user_friends;?>";
+	
+	
+	
+	
 </script>
 
 <h1> Welcome : <?php echo $user_profile['name']; ?> </h1>
@@ -10,6 +13,11 @@ var stringlist = "<?php echo $user_friends;?>";
 <h5> You can <a href = "<?php echo $logout_url?>" > Logout </a> here</h5>
 
 <?php echo $user_friends;?>
+
+<?php
+	echo form_open('../index.php/addNewExpense/addNewRecord');
+	echo form_submit('submit', 'Add');
+?>
 
 
 
