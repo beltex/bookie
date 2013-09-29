@@ -2,10 +2,7 @@
 
 <script type="text/javascript"> 
 	var stringlist = "<?php echo $user_friends;?>";
-	
-	
-	
-	
+
 </script>
 
 <h1> Welcome : <?php echo $user_profile['name']; ?> </h1>
