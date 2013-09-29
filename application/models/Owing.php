@@ -27,7 +27,7 @@ class Owing extends CI_Model {
 	
 	function insertRecord($uid, $toId, $value)
 	{
-		$q = $this->db->query("INSERT INTO Owing (`id_from`, `id_to`, `value`, `status`, `timestamp`) VALUES ('". $uid ."', '". $toId ."', ". $value .", '0', UNIX_TIMESTAMP())");
+		$q = $this->db->query("INSERT INTO Owing (`id_from`, `id_to`, `value`, `status`, `timestamp`) VALUES ('". $toId ."', '". $uid ."', ". $value .", '0', UNIX_TIMESTAMP())");
 		$this->load->model('Person');
 		$this->Person->insertRecord($toId);
 		
