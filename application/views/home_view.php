@@ -7,10 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<!-- MUST GET REAL USERNAME -->
-    <title>Bookie // Omeed Safaee-Rad</title>
+    <title>Bookie // <?php echo $user_profile['name']; ?></title>
 
     <!-- Bootstrap core CSS - DO NOT TOUCH THIS -->
-    <link href="dist/css/bootstrap.css" rel="stylesheet">
+    <link href="<?php echo base_url() ?>dist/css/bootstrap.css" rel="stylesheet">
     
 	<!-- Custom styles for Bookie -->
     <link href="bookie.css" rel="stylesheet">
@@ -18,6 +18,7 @@
 
 
 
+    <link href="<?php echo base_url() ?>css/bookie.css" rel="stylesheet">
   </head>
   <!-- HEAD END -->
 
@@ -30,7 +31,7 @@
 
 		<!-- MUST GET REAL USERNAME -->
 		<!-- Always links to home_view.php -->
-        <a class="navbar-brand" href="home_view.php">Omeed Safaee-Rad</a>
+        <a class="navbar-brand" href="../../bookie"><?php echo $user_profile['name']; ?></a>
        
 		<!-- LOGOUT START --> 
 		<form action="login_view.php">
@@ -48,15 +49,15 @@
 
 	<!-- CONTAINER START - main body -->
     <div class="container">
-      <form class="form-signin" action="user_add.php">
+      <form class="form-signin" action="../index.php/addNewExpense">
         <h3 class="form-signin-heading">Your Social Bookie</h3>
-		<button class="btn btn-lg btn-warning btn-block" type="submit" action="user_add.php">+ Add Expense</button>
+		<button class="btn btn-lg btn-warning btn-block" type="submit" >+ Add Expense</button>
       </form>
-      <form class="form-signin" action="user_you_owe.php">
-		<button class="btn btn-lg btn-danger btn-block" type="submit"><span class="badge pull-right notes">7</span>You Owe: $75.00 &raquo;</button>
+      <form class="form-signin" action="../index.php/YouOwePeople">
+		<button class="btn btn-lg btn-danger btn-block" type="submit"><span class="badge pull-right notes">7</span>You Owe: $<?php echo $amount_owing?>  &raquo;</button>
 	  </form>
-      <form class="form-signin" action="user_owe_me.php">
-		<button class="btn btn-lg btn-success btn-block text-left" type="submit"><span class="badge pull-right notes">3</span>Owe You: $125.17 &raquo;</button>
+      <form class="form-signin" action="../index.php/PeopleOweYou">
+		<button class="btn btn-lg btn-success btn-block text-left" type="submit"><span class="badge pull-right notes">3</span>Owe You: $<?php echo $amount_lended?> &raquo;</button>
       </form>
     </div>
 	<!-- CONTAINER END -->

@@ -24,7 +24,7 @@ class Login extends CI_Controller {
 			redirect('home');
 		} else {
 			$data['login_url'] = $this -> facebook -> getLoginUrl();
-			$this -> load -> view('loginPage', $data);
+			$this -> load -> view('login_view', $data);
 		}
 	}
 }
