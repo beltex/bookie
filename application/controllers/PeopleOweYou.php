@@ -26,9 +26,12 @@ class PeopleOweYou extends CI_Controller {
 			$amountLended = $this->Owing->getAmountLended($data['user_profile']['id']);
 			
 			$this->load->model("Owing");
+			
+			$totalLendedMoney = $this->Owing->getAmountLended($data['user_profile']['id']);
+			$data['total_lended'] = $totalLendedMoney[0]['sum'];
 			$data['people_owe_you'] = $this->Owing->getAmountLendedToPeople($data['user_profile']['id']);
 			
-			$this->load->view("PeopleOweYouPage", $data);
+			$this->load->view("user_owe_me", $data);
 			
 			//$this->Owing->getAmountOwedToPeople($data['user_profile']['id']);
 			// $amountOwing = $this->Owing->getAmountOwing($data['user_profile']['id']);

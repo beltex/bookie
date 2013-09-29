@@ -9,10 +9,10 @@
     <title>Bookie</title>
 
     <!-- Bootstrap core CSS - DO NOT TOUCH THIS -->
-    <link href="dist/css/bootstrap.css" rel="stylesheet">
+    <link href="<?php echo base_url() ?>dist/css/bootstrap.css" rel="stylesheet">
 
     <!-- Custom styles for Bookie -->
-    <link href="bookie.css" rel="stylesheet">
+    <link href="<?php echo base_url() ?>css/bookie.css" rel="stylesheet">
   </head>
   <!-- HEAD END -->
 
@@ -22,17 +22,18 @@
 	<!-- HEADER START (navbar) - this will be copied for all pages -->
 	<div class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
-        <a class="navbar-brand" href="login_view.php">Bookie</a>
+        <a class="navbar-brand" href="../bookie">Bookie</a>
       </div>
     </div>
 	<!-- HEADER END -->
 
 	<!-- CONTAINER START - main body -->
     <div class="container">
-      <form class="form-signin" action="home_view.php">
+      <form class="form-signin" action="<?= $login_url ?>">
         <h1 class="form-signin-heading">Bookie</h1>
 		<p class="lead">[ Social Finance Tracking ]</p>
-		<button class="btn btn-lg btn-primary btn-block" type="submit">Facebook Login</button>
+		<!-- <button class="btn btn-lg btn-primary btn-block" type="submit">Facebook Login</button> -->
+		<a href="<?= $login_url ?>"> Facebook Login <a/>
       </form>
     </div>
 	<!-- CONTAINER END -->

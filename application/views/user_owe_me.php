@@ -7,13 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<!-- MUST GET REAL USERNAME -->
-    <title>Bookie // Omeed Safaee-Rad</title>
+    <title>Bookie // <?php echo $user_profile['name']; ?></title>
 
     <!-- Bootstrap core CSS - DO NOT TOUCH THIS -->
-    <link href="dist/css/bootstrap.css" rel="stylesheet">
+    <link href="<?php echo base_url() ?>dist/css/bootstrap.css" rel="stylesheet">
     
 	<!-- Custom styles for Bookie -->
-    <link href="bookie.css" rel="stylesheet">
+    <link href="<?php echo base_url() ?>css/bookie.css" rel="stylesheet">
   </head>
   <!-- HEAD END -->
 
@@ -26,7 +26,7 @@
 
 		<!-- MUST GET REAL USERNAME -->
 		<!-- Always links to home_view.php -->
-        <a class="navbar-brand" href="home_view.php">Omeed Safaee-Rad</a>
+        <a class="navbar-brand" href="../../bookie"><?php echo $user_profile['name']; ?></a>
        
 		<!-- LOGOUT START --> 
 		<form action="login_view.php">
@@ -43,14 +43,13 @@
 	<!-- HEADER END -->
 
 	<!-- CONTAINER START - main body -->
-    <div class="container">
-      <form class="form-signin" action="user_add.php">
-        <h3 class="form-signin-heading">Owe You: $125.17</h3>
-		<button class="btn btn-lg btn-success btn-block" type="submit" action="user_add.php">Saad: $100.17 &raquo;</button>
-      </form>
-      <form class="form-signin" action="user_you_owe.php">
-		<button class="btn btn-lg btn-success btn-block" type="submit">Nidale: $25.00  &raquo;</button>
-      </form>
+    <div class="container"> <br/>
+    <h3 class="form-signin">You Owe: $<?php echo $total_lended ?></h3>	
+    	
+    	<!-- Hack Alert! Pulling off a Nidale-->
+      <?php foreach($people_owe_you as $people) :?>
+		<?php echo "<form class='form-signin' action='user_add.php'><button class='btn btn-lg btn-success btn-block' type='submit' action='user_add.php'>". $people['name']  .": $".$people['totals']." &raquo;</button></form> " ?>
+	  <?php endforeach; ?>
     </div>
 	<!-- CONTAINER END -->
 

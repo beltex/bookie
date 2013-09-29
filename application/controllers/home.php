@@ -27,7 +27,7 @@ class home extends CI_Controller {
 			$amountOwing = $this->Owing->getAmountOwing($data['user_profile']['id']);
 			$data['amount_lended'] = $amountLended[0]['sum'];
 			$data['amount_owing'] = $amountOwing[0]['sum'];;
-			$this -> load -> view('homePage', $data);
+			$this -> load -> view('home_view', $data);
 			
 		} else {
 			redirect('login');
