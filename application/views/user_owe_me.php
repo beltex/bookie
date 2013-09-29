@@ -45,14 +45,11 @@
 	<!-- CONTAINER START - main body -->
     <div class="container">
       <form class="form-signin" action="user_add.php">
-        <h3 class="form-signin-heading">Your Social Bookie</h3>
-		<button class="btn btn-lg btn-warning btn-block" type="submit" action="user_add.php">+ Add Expense</button>
+        <h3 class="form-signin-heading">Owe You: $125.17</h3>
+		<button class="btn btn-lg btn-success btn-block" type="submit" action="user_add.php">Saad: $100.17 &raquo;</button>
       </form>
       <form class="form-signin" action="user_you_owe.php">
-		<button class="btn btn-lg btn-danger btn-block" type="submit">You Owe: $75.00 &raquo;</button>
-      </form>
-      <form class="form-signin" action="user_owe_me.php">
-		<button class="btn btn-lg btn-success btn-block text-left" type="submit">Owe You: $125.17 &raquo;</button>
+		<button class="btn btn-lg btn-success btn-block" type="submit">Nidale: $25.00  &raquo;</button>
       </form>
     </div>
 	<!-- CONTAINER END -->
