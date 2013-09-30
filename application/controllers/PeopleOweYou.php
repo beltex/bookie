@@ -43,14 +43,6 @@ class PeopleOweYou extends CI_Controller {
 			redirect('login');
 		}
 	}
-
-	function deleteRecords()
-	{
-		$friendID= $this->input->get('friendID');
-		$this->load->model('Owing');
-		$this->Owing->deleteRecords($friendID);
-		redirect('PeopleOweYou');
-	}
 	
 	function addNewExpense()
 	{

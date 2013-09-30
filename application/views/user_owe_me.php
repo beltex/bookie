@@ -48,10 +48,8 @@
     	
     	<!-- Hack Alert! Pulling off a Nidale-->
       <?php foreach($people_owe_you as $people) :?>
-		<?php echo "<form class='form-signin' action='#'><button class='btn btn-lg btn-success btn-block' type='submit' action='user_add.php'>". $people['name']  .": $".$people['totals']." &raquo;</button></form> " ?>
+		<?php echo "<form class='form-signin' action='#'><button class='btn btn-lg btn-success btn-block' type='submit' >". $people['name']  .": $".$people['totals']." &raquo;</button></form> " ?>
 	  <?php endforeach; ?>
-	  
-    </div>
 	<!-- CONTAINER END -->
 
     <!-- Bootstrap core JavaScript

@@ -55,12 +55,9 @@ class Owing extends CI_Model {
 		return ($this->ObjectToArray($data));	
 	}
 	
-	function deleteRecords($friendID){
-		$q = $this->db->query("DELETE FROM Owing where from_id = " . $friendID);
+	function deleteRecords($friendID, $uid){
+		$q = $this->db->query("DELETE FROM Owing where id_from = " . $friendID. "AND id_to = ". $uid);
 	}
-	
-	
-	
 	
 	function ObjectToArray($Array){
 		for($i = 0; $i < count($Array); $i++){
