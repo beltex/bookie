@@ -2,52 +2,51 @@
 
 /* BODY STARTS */
 /* If we want a sticky footer, this have to change this,
-   can't have any padding. */
+ can't have any padding. */
 body {
-  padding-top: 40px;
-  padding-bottom: 40px;
-  /*background-color: #FFF8DC; /* PAPER */
-  /*background-color: #F8ECC2; /* PAPER */
-  background-color: #ffffff; /* WHITE */
-  /*background-color: #eee;*/
+	padding-top: 40px;
+	padding-bottom: 40px;
+	/*background-color: #FFF8DC; /* PAPER */
+	/*background-color: #F8ECC2; /* PAPER */
+	background-color: #ffffff; /* WHITE */
+	/*background-color: #eee;*/
 }
 /* BODY ENDS */
 
 /* FORM STARTS */
 /* Some of this form CSS might not be need. It's
-   from the sigin.html Bootstrap example */
+ from the sigin.html Bootstrap example */
 .form-signin {
-  max-width: 330px;
-  padding: 15px;
-  margin: 0 auto;
-  text-align: center;
+	max-width: 330px;
+	padding: 15px;
+	margin: 0 auto;
+	text-align: center;
 }
-.form-signin .form-signin-heading,
-.form-signin .checkbox {
-  margin-bottom: 10px;
+.form-signin .form-signin-heading, .form-signin .checkbox {
+	margin-bottom: 10px;
 }
 .form-signin .checkbox {
-  font-weight: normal;
+	font-weight: normal;
 }
 .form-signin .form-control {
-  position: relative;
-  font-size: 16px;
-  height: auto;
-  padding: 10px;
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
+	position: relative;
+	font-size: 16px;
+	height: auto;
+	padding: 10px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
 }
 .form-signin .form-control:focus {
-  z-index: 2;
+	z-index: 2;
 }
 /* FORM ENDS */
 
 /* Logout button */
 .logout-btn {
-	 margin-top: 11px;
-	 margin-right: -7px;
-     background-color: #ffffff; /* WHITE */
+	margin-top: 11px;
+	margin-right: -7px;
+	background-color: #ffffff; /* WHITE */
 }
 
 .form-control {
@@ -59,16 +58,22 @@ body {
 }
 
 .notes {
-margin-top: 4px;
-margin-right: 4px;
+	margin-top: 4px;
+	margin-right: 4px;
 }
 
-
 .btn-owe {
-width:251px;
+	width: 251px;
 }
 
 .btn-owe-check {
-   width: 50px;
-   margin-top: -0.5px;
+	width: 50px;
+	margin-top: -0.5px;
+}
+
+/* Trying to set a height and width for the autocomplete for friend's list dropdown'*/
+.ui-autocomplete {
+	height: 200px;
+	overflow-y: scroll;
+	overflow-x: hidden;
 }

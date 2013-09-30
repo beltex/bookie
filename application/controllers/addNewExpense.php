@@ -27,7 +27,7 @@ class AddNewExpense extends CI_Controller {
 
 		if ($user) {
 			$data['logout_url'] = $this -> facebook -> getLogoutUrl();
-			$this -> load -> view('user_add_copy', $data);
+			$this -> load -> view('user_add', $data);
 			
 		} else {
 			redirect('login');

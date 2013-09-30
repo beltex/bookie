@@ -33,10 +33,6 @@ class YouOwePeople extends CI_Controller {
 			$data['people_you_owe'] = $PeopleYouOweAll;
 			$data['size'] = $size;
 			$this->load->view("user_you_owe", $data);
-			// $amountOwing = $this->Owing->getAmountOwing($data['user_profile']['id']);
-			// $data['amount_lended'] = $amountLended[0]['sum'];
-			// $data['amount_owing'] = $amountOwing[0]['sum'];;
-			// $this -> load -> view('homePage', $data);
 			
 		} else {
 			redirect('login');

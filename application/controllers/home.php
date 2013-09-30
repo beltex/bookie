@@ -33,7 +33,7 @@ class home extends CI_Controller {
 			$sizeOwed = sizeof($amountTotalOwed);
 			
 			$data['size_lended'] = $sizeLended;
-			$data['size_owed'] = $sizeOwed;
+			$data['size_owed'] = $sizeOwed;	
 			
 			$data['amount_lended'] = $amountOwing[0]['sum'];
 			$data['amount_owing'] = $amountLended[0]['sum'];;
