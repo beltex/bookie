@@ -53,7 +53,7 @@ class AddNewExpense extends CI_Controller {
 			$friendId = '502616400';
 			$value = 55.5;
 			$this->load->model('Owing');
-			$this->Owing->insertRecord($myId, $clientID, $amount);
+			$this->Owing->insertRecord($myId, $clientID, $amount, $event);
 			redirect('home');
 		} else redirect('login');
 	}
