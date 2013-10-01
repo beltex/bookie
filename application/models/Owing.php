@@ -41,7 +41,8 @@ class Owing extends CI_Model {
 				$data[] = $row;
 			}
 		}
-		return ($this->ObjectToArray($data));	
+		if(isset($data))
+			return ($this->ObjectToArray($data));	
 	}
 	
 	function getAmountOwedToPeople($uid){
@@ -52,7 +53,9 @@ class Owing extends CI_Model {
 				$data[] = $row;
 			}
 		}
-		return ($this->ObjectToArray($data));	
+	
+		if(isset($data))
+			return ($this->ObjectToArray($data));	
 	}
 	
 	function deleteRecords($friendID, $uid){
