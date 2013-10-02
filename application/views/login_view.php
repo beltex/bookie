@@ -18,7 +18,6 @@
 
   <!-- BODY START -->
   <body>
-
 	<!-- HEADER START (navbar) - this will be copied for all pages -->
 	<div class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
