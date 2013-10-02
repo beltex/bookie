@@ -8,16 +8,16 @@ Bookie is a social finance tracking web app for desktop & mobile that hooks into
 ### Tech Stack
 
 ##### Back-end
--Apache Web Server
--PHP with CodeIgniter
--MySQL
--Facebook API
+- Apache Web Server
+- PHP with CodeIgniter
+- MySQL
+- Facebook API
 
 ##### Front-end
--JavaScript
--HTML
--CSS
--Twitter Bootstrap 3.0
+- JavaScript
+- HTML
+- CSS
+- Twitter Bootstrap 3.0
 
 ### Origin
 
