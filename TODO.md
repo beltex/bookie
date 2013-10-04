@@ -10,3 +10,11 @@ TODO
 - Removed the Apache 2 license, now that its closed source, do we need one?
 - Move repo to GitHub Organization such that its independent of everyone (because Zain doesn't trust me :))
 - Server for deploying app (Windows Azure - Zain)
+- Split payments
+- Notifications
+- Confirmations
+- UI updates
+- Facebook profile pic
+- jQuery Accordin
+- WE NEED A REAL PLAN FOR WHAT NEEDS TO BE DONE FOR LAUNCH
+- DON'T SHOW THE PIE BEFORE ITS BAKED
