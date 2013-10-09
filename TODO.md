@@ -18,3 +18,4 @@ TODO
 - jQuery Accordin
 - WE NEED A REAL PLAN FOR WHAT NEEDS TO BE DONE FOR LAUNCH
 - DON'T SHOW THE PIE BEFORE ITS BAKED
+- Prep for performance testing - ab & JMeter for now
