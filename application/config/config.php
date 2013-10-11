@@ -14,7 +14,7 @@
 | path to your installation.
 |
 */
-$config['base_url']	= 'http://10.24.2.45:8888/bookie';
+$config['base_url']	= 'http://10.24.4.171:8888/bookie';
 
 /*
 |--------------------------------------------------------------------------

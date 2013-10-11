@@ -19,6 +19,12 @@
   <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
   <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
 
+<style type="text/css" media="screen">
+
+.ui-autocomplete { height: 150px; overflow-y: scroll; overflow-x: hidden;}
+	
+</style>
+
 <script>
 
 	var stringlist =  <?php echo $user_friends?> 
@@ -29,26 +35,30 @@
 		var jsonlen = JSONObject.length;
 		for(var i = 0; i < jsonlen; i++)
 		{
-			people.push({label: ""+JSONObject[i].name, id: ""+JSONObject[i].id});
+			people.push({label: ""+JSONObject[i].name, id: ""+JSONObject[i].id, image: "http://graph.facebook.com/" + JSONObject[i].id +"/picture"});
 		}
 	}
 
 	tokenize_json(stringlist); 
 
 	$(document).ready(function() {
-	    $( "#topics5" ).autocomplete({
+		
+	    $( "#friend" ).autocomplete({
 	        minLength: 0,
 	        source: people,
-	        focus: function( event, ui ) {
-	            $( "#topics5" ).val( ui.item.label );
-	            return false;
-	        },
 	        select: function( event, ui ) {
-	            $( "#topics5" ).val( ui.item.label );
+	            $( "#friend" ).val( ui.item.label );
 	            $("#clientID").val(ui.item.id);
 	            return false;
 	    	}
-		})
+		}).data( "uiAutocomplete" )._renderItem = function( ul, item ) {
+        var inner_html = "<a><img src='" + item.image + "'> " + item.label +"</a>";
+        return $( "<li></li>" )
+            .data( "item.autocomplete", item )
+            .append(inner_html)
+            .appendTo( ul );
+   		};
+	
 	});
 
 </script>
@@ -98,7 +108,7 @@
 		<br/>
 		<div class="input-group">
   			<span class="input-group-addon"><span style="visibility:hidden">as</span>Who<span style="visibility:hidden">.s</span></span>
-  			<input id="topics5" type="text" class="form-control " placeholder="Who owe's you?" name="who">
+  			<input id="friend" type="text" class="form-control " placeholder="Who owe's you?" name="who">
   			<input type="hidden" id="clientId" value=""/>
 		</div>
 		<br/>
