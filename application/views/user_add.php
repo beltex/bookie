@@ -19,12 +19,6 @@
   <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
   <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
 
-<style type="text/css" media="screen">
-
-.ui-autocomplete { height: 150px; overflow-y: scroll; overflow-x: hidden;}
-	
-</style>
-
   </head>
   <!-- HEAD END -->
 
