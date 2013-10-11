@@ -36,7 +36,7 @@ class AddNewExpense extends CI_Controller {
 	
 	function addNewRecord()
 	{
-		// Get the data from post
+		// Get the data from post, getting it from git at the moment.
 		$clientID= $this->input->get('clientID');
 		$event = $this->input->get('event');
 		$amount = $this->input->get('amount');

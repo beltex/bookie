@@ -26,7 +26,7 @@
 
 		<!-- MUST GET REAL USERNAME -->
 		<!-- Always links to home_view.php -->
-        <a class="navbar-brand" href="../../bookie"><?php echo $user_profile['name']; ?></a>
+        <a class="navbar-brand" href="../../bookie"><img src="http://graph.facebook.com/<?php echo $user_profile['id']?>/picture" ><?php echo $user_profile['name']; ?></a>
        
 		<!-- LOGOUT START --> 
 		<form action="#">

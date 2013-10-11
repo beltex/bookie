@@ -37,7 +37,7 @@
 
         <!-- MUST GET REAL USERNAME -->
         <!-- Always links to home_view.php -->
-        <a class="navbar-brand" href="../../bookie"><?php echo $user_profile['name']; ?></a>
+        <a class="navbar-brand" href="../../bookie"><img src="http://graph.facebook.com/<?php echo $user_profile['id']?>/picture" ><?php echo $user_profile['name']; ?></a>
 
         <!-- LOGOUT START -->
         <form action="#">
@@ -96,7 +96,7 @@
 		var jsonlen = JSONObject.length;
 		for(var i = 0; i < jsonlen; i++)
 		{
-			people.push({label: ""+JSONObject[i].name, id: ""+JSONObject[i].id, image: "http://graph.facebook.com/" + JSONObject[i].id +"/picture"});
+			people.push({label: ""+ JSONObject[i].name, id: ""+ JSONObject[i].id, image: "http://graph.facebook.com/" + JSONObject[i].id +"/picture"});
 		}
 	}
 	
@@ -132,14 +132,8 @@
 
           newname += " " + arr[i].substring(0, 1) + ".";
         }
-
       }
       return newname;
-
-
-
-
-
 		//return // the First name, the middle name if it exists and the Initial of the last name		
 	}
 	
