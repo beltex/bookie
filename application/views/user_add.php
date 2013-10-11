@@ -102,7 +102,7 @@
 	
 	function firstMiddleInitial(name)
 	{
-		return // the First name, the last name name and the Initial of the last name		
+		return // the First name, the middle name if it exists and the Initial of the last name		
 	}
 	
 
