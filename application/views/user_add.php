@@ -102,7 +102,45 @@
 	
 	function firstMiddleInitial(name)
 	{
-		return // the First name, the middle name if it exists and the Initial of the last name		
+     if (name == null || name.length == 0) return "";
+     
+      //get all tokens (by space) into an array
+      var arr = name.split(" ");
+      var newname = "";
+      for(var i = 0; i < arr.length; i++)
+      {
+        if (i == 0)
+        {
+          newname += arr[i];
+        }
+        else if (i == 1)
+        {
+          //special case for Zain A. versus Vadim "Tony" S.
+          if (arr.length == 2)
+          {
+            newname += " " + arr[i].substring(0, 1) + ".";
+          }
+          else
+          {
+            newname += " " + arr[i];
+          }
+        }
+        else
+        {
+          //just in case
+          if (arr[i].length == 0) continue;
+
+          newname += " " + arr[i].substring(0, 1) + ".";
+        }
+
+      }
+      return newname;
+
+
+
+
+
+		//return // the First name, the middle name if it exists and the Initial of the last name		
 	}
 	
 
