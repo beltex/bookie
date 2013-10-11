@@ -25,45 +25,6 @@
 	
 </style>
 
-<script>
-
-	var stringlist =  <?php echo $user_friends?> 
-	var people = [];
-
-	function tokenize_json(JSONObject)
-	{
-		var jsonlen = JSONObject.length;
-		for(var i = 0; i < jsonlen; i++)
-		{
-			people.push({label: ""+JSONObject[i].name, id: ""+JSONObject[i].id, image: "http://graph.facebook.com/" + JSONObject[i].id +"/picture"});
-		}
-	}
-
-	tokenize_json(stringlist); 
-
-	$(document).ready(function() {
-		
-	    $( "#friend" ).autocomplete({
-	        minLength: 0,
-	        source: people,
-	        select: function( event, ui ) {
-	            $( "#friend" ).val( ui.item.label );
-	            $("#clientID").val(ui.item.id);
-	            return false;
-	    	}
-		}).data( "uiAutocomplete" )._renderItem = function( ul, item ) {
-        var inner_html = "<a><img src='" + item.image + "'> " + item.label +"</a>";
-        return $( "<li></li>" )
-            .data( "item.autocomplete", item )
-            .append(inner_html)
-            .appendTo( ul );
-   		};
-	
-	});
-
-</script>
-
-
   </head>
   <!-- HEAD END -->
 
@@ -124,4 +85,45 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
   </body>
+  
+<script>
+
+	var stringlist =  <?php echo $user_friends?> 
+	var people = [];
+
+	function tokenize_json(JSONObject)
+	{
+		var jsonlen = JSONObject.length;
+		for(var i = 0; i < jsonlen; i++)
+		{
+			people.push({label: ""+JSONObject[i].name, id: ""+JSONObject[i].id, image: "http://graph.facebook.com/" + JSONObject[i].id +"/picture"});
+		}
+	}
+	
+	function firstMiddleInitial(name)
+	{
+		return // the First name, the last name name and the Initial of the last name		
+	}
+	
+
+	tokenize_json(stringlist); 
+
+	$(document).ready(function() {
+		
+	    $( "#friend" ).autocomplete({
+	        minLength: 0,
+	        source: people,
+	        select: function( event, ui ) {
+	            $( "#friend" ).val( ui.item.label );
+	            $("#clientID").val(ui.item.id);
+	            return false;
+	    	}
+		}).data( "uiAutocomplete" )._renderItem = function( ul, item ) {
+        var inner_html = "<a><img src='" + item.image + "'> " + item.label +"</a>";
+        return $( "<li></li>" ).data( "item.autocomplete", item ).append(inner_html).appendTo( ul );
+   		};
+	});
+
+</script>
+  
 </html>

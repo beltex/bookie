@@ -18,8 +18,8 @@ class AddNewExpense extends CI_Controller {
 				$friends = $friends['data'];
 
 				$jsonData = json_encode($friends);
-			
 				$data['user_friends'] = $jsonData;
+				
 			} catch (FacebookApiException $e) {
 				$user = null;
 			}
