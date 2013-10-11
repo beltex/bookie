@@ -15,6 +15,11 @@ TODO
 - Confirmations
 - UI updates
 - Facebook profile pic
-- jQuery Accordin
+- jQuery Accordian
 - WE NEED A REAL PLAN FOR WHAT NEEDS TO BE DONE FOR LAUNCH
 - DON'T SHOW THE PIE BEFORE ITS BAKED
+<<<<<<< HEAD
+- Look into billig - Vadim wants to remember that he owes Fido.. 
+=======
+- Prep for performance testing - ab & JMeter for now
+>>>>>>> 62b6ca5453ada266fbd3f63a2585ec92f45b033a
