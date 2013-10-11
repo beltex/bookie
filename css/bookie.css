@@ -77,3 +77,10 @@ body {
 	overflow-y: scroll;
 	overflow-x: hidden;
 }
+
+.navbar-brand {
+float: left;
+padding: 1px 1px;
+font-size: 18px;
+line-height: 20px;
+}
