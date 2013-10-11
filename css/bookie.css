@@ -73,7 +73,7 @@ body {
 
 /* Trying to set a height and width for the autocomplete for friend's list dropdown'*/
 .ui-autocomplete {
-	height: 200px;
+	height: 150px;
 	overflow-y: scroll;
 	overflow-x: hidden;
 }
