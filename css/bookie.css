@@ -71,13 +71,6 @@ body {
 	margin-top: -0.5px;
 }
 
-/* Trying to set a height and width for the autocomplete for friend's list dropdown'*/
-.ui-autocomplete {
-	height: 150px;
-	overflow-y: scroll;
-	overflow-x: hidden;
-}
-
 .list-container{
 	height: 50px;
 	width: 190px;

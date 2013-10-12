@@ -13,8 +13,6 @@
     <link href="<?php echo base_url() ?>dist/css/bootstrap.css" rel="stylesheet">
     
 	<!-- Custom styles for Bookie -->
-    <link href="bookie.css" rel="stylesheet">
-
     <link href="<?php echo base_url() ?>css/bookie.css" rel="stylesheet">
   </head>
   <!-- HEAD END -->
