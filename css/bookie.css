@@ -77,3 +77,23 @@ body {
 	overflow-y: scroll;
 	overflow-x: hidden;
 }
+
+.list-container{
+	height: 50px;
+	width: 190px;
+}
+
+.list-name{
+
+}
+
+.navbar-image {
+	padding-right: 7px;
+}
+
+.dropdown-text
+{
+	font-size:70%;
+}
+
+}

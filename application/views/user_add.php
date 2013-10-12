@@ -31,7 +31,7 @@
 
         <!-- MUST GET REAL USERNAME -->
         <!-- Always links to home_view.php -->
-        <a class="navbar-brand" href="../../bookie"><img src="http://graph.facebook.com/<?php echo $user_profile['id']?>/picture" ><?php echo $user_profile['name']; ?></a>
+        <a class="navbar-brand" href="../../bookie"><img class = "navbar-image" src="http://graph.facebook.com/<?php echo $user_profile['id']?>/picture" ><?php echo $user_profile['name']; ?></a>
 
         <!-- LOGOUT START -->
         <form action="#">
@@ -90,7 +90,7 @@
 		var jsonlen = JSONObject.length;
 		for(var i = 0; i < jsonlen; i++)
 		{
-			people.push({label: ""+ JSONObject[i].name, id: ""+ JSONObject[i].id, image: "http://graph.facebook.com/" + JSONObject[i].id +"/picture"});
+			people.push({label: ""+ firstMiddleInitial(JSONObject[i].name), id: ""+ JSONObject[i].id, image: "http://graph.facebook.com/" + JSONObject[i].id +"/picture"});
 		}
 	}
 	
@@ -145,11 +145,11 @@
 	            return false;
 	    	}
 		}).data( "uiAutocomplete" )._renderItem = function( ul, item ) {
-        var inner_html = "<a><img src='" + item.image + "'> " + item.label +"</a>";
+        var inner_html = "<a><span class = 'list-container'><img src='" + item.image + "'>" + item.label +"</span></a>";
         return $( "<li></li>" ).data( "item.autocomplete", item ).append(inner_html).appendTo( ul );
    		};
 	});
-
+  
 </script>
   
 </html>
