@@ -91,9 +91,72 @@ body {
 	padding-right: 7px;
 }
 
-.dropdown-text
-{
-	font-size:70%;
+.friends-dropdownList{
+	width: 200px;
+	height: 50px;
 }
 
+.friends-dropdownList-Label
+{
+	width: 145px;
+	float: right;
+	font: Helvetica,Arial,sans-serif;
+	font-size: 0.9em;
+	font-weight: normal;
 }
+
+.friends-dropdownList-image
+{
+	width: 50px;
+	height: 50px;
+	float: left;
+}
+
+.ui-autocomplete {
+    max-height: 200px;
+    height: auto;
+    border: 1px solid;
+}
+
+.ui-autocomplete-input{
+	padding: 0px;
+}
+
+.ui-menu-item a {
+	padding:0px;
+	padding-bottom: 2px;
+}
+
+.ui-menu {
+	border: 5px;
+	padding: 1px;
+	margin: 1px;
+}
+
+.ui-widget{
+	border: 5px;
+	padding: 1px;
+	margin: 1px;
+}
+
+
+.ui-widget-content{
+	border: 1px;
+	padding: 1px;
+	margin: 1px;
+}
+
+.ui-menu-item{
+	border: 1px;
+	padding: 1px;
+	margin: 1px;
+}
+
+.ui-corner-all{
+	border: 1px;
+	padding: 0px;
+	margin: 1px;
+}
+
+/*The CSS works fine for Firefox, but from some reason doesn't render dropdown properly in Chrome abd mobile browsers. Look into this in more detail*/
+

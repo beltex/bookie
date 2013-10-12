@@ -11,16 +11,23 @@
 
     <!-- Bootstrap core CSS - DO NOT TOUCH THIS -->
     <link href="<?php echo base_url() ?>dist/css/bootstrap.css" rel="stylesheet">
-    
-	<!-- Custom styles for Bookie -->
-    <link href="<?php echo base_url() ?>css/bookie.css" rel="stylesheet">
-
+  
   <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
   <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
   <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
 
+  <!-- Custom styles for Bookie -->
+  <link href="<?php echo base_url() ?>css/bookie.css" rel="stylesheet">
+
+   <style>
+   
+</style>
+
+
   </head>
   <!-- HEAD END -->
+
+
 
   <!-- BODY START -->
   <body>
@@ -90,46 +97,46 @@
 		var jsonlen = JSONObject.length;
 		for(var i = 0; i < jsonlen; i++)
 		{
-			people.push({label: ""+ firstMiddleInitial(JSONObject[i].name), id: ""+ JSONObject[i].id, image: "http://graph.facebook.com/" + JSONObject[i].id +"/picture"});
+			people.push({label: ""+ JSONObject[i].name, id: ""+ JSONObject[i].id, image: "http://graph.facebook.com/" + JSONObject[i].id +"/picture"});
 		}
 	}
 	
-	function firstMiddleInitial(name)
-	{
-     if (name == null || name.length == 0) return "";
+	// function firstMiddleInitial(name)
+  // {
+ //     if (name == null || name.length == 0) return "";
      
-      //get all tokens (by space) into an array
-      var arr = name.split(" ");
-      var newname = "";
-      for(var i = 0; i < arr.length; i++)
-      {
-        if (i == 0)
-        {
-          newname += arr[i];
-        }
-        else if (i == 1)
-        {
-          //special case for Zain A. versus Vadim "Tony" S.
-          if (arr.length == 2)
-          {
-            newname += " " + arr[i].substring(0, 1) + ".";
-          }
-          else
-          {
-            newname += " " + arr[i];
-          }
-        }
-        else
-        {
-          //just in case
-          if (arr[i].length == 0) continue;
+ //      //get all tokens (by space) into an array
+ //      var arr = name.split(" ");
+ //      var newname = "";
+ //      for(var i = 0; i < arr.length; i++)
+ //      {
+ //        if (i == 0)
+ //        {
+ //          newname += arr[i];
+ //        }
+ //        else if (i == 1)
+ //        {
+ //          //special case for Zain A. versus Vadim "Tony" S.
+ //          if (arr.length == 2)
+ //          {
+ //            newname += " " + arr[i].substring(0, 1) + ".";
+ //          }
+ //          else
+ //          {
+ //            newname += " " + arr[i];
+ //          }
+ //        }
+ //        else
+ //        {
+ //          //just in case
+ //          if (arr[i].length == 0) continue;
 
-          newname += " " + arr[i].substring(0, 1) + ".";
-        }
-      }
-      return newname;
+ //          newname += " " + arr[i].substring(0, 1) + ".";
+ //        }
+ //      }
+ //      return newname;
 		//return // the First name, the middle name if it exists and the Initial of the last name		
-	}
+	//}
 	
 
 	tokenize_json(stringlist); 
@@ -144,12 +151,12 @@
 	            $("#clientID").val(ui.item.id);
 	            return false;
 	    	}
-		}).data( "uiAutocomplete" )._renderItem = function( ul, item ) {
-        var inner_html = "<a><span class = 'list-container'><img src='" + item.image + "'>" + item.label +"</span></a>";
+		}).data( "ui-autocomplete" )._renderItem = function( ul, item ) {
+        var inner_html = "<a><div class = 'friends-dropdownList'><img class = 'friends-dropdownList-image' src='" + item.image + "'><label class = 'friends-dropdownList-Label'>" + item.label +"</label></div></a>";
         return $( "<li></li>" ).data( "item.autocomplete", item ).append(inner_html).appendTo( ul );
    		};
 	});
-  
+
 </script>
   
 </html>
