@@ -18,4 +18,5 @@ TODO
 - jQuery Accordian
 - WE NEED A REAL PLAN FOR WHAT NEEDS TO BE DONE FOR LAUNCH
 - DON'T SHOW THE PIE BEFORE ITS BAKED
-- Look into billig - Vadim wants to remember that he owes Fido.. 
+- Look into billig - Vadim wants to remember that he owes Fido..
+- Get SSL Certs - offshoot discussion for cheap ones - https://news.ycombinator.com/item?id=6576250 
