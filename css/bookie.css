@@ -80,8 +80,10 @@ body {
 
 }
 
-.navbar-image {
-	padding-right: 7px;
+.navbar-top-image{
+	height:50px;
+	width:50px;
+	border-radius: 5px;
 }
 
 .friends-dropdownList{
@@ -103,10 +105,14 @@ body {
 	width: 40px;
 	height: 40px;
 	float: left;
+	border-radius: 5px;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
 }
 
 .ui-autocomplete {
     max-height: 200px;
+    width: 200px;
     overflow-y: scroll;
     overflow-x: hidden;
     height: auto;
@@ -145,6 +151,13 @@ body {
 .ui-corner-all{
 	padding: 0px;
 	margin: 1px;
+}
+
+.navbar-text-heading{
+	padding-top: 20px;
+	padding-left: 7px;
+	font-size: 20px;
+	float: right;
 }
 
 /*The CSS works fine for Firefox, but from some reason doesn't render dropdown properly in Chrome abd mobile browsers. Look into this in more detail*/

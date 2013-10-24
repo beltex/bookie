@@ -25,9 +25,11 @@ class Owing extends CI_Model {
 	}
 	
 	
-	function insertRecord($uid, $toId, $value, $event)
+	function insertNewRecord($uid, $toId, $value, $event, $status)
 	{
-		$q = $this->db->query("INSERT INTO Owing (`id_from`, `id_to`, `value`, `status`, `event`) VALUES ('". $toId ."', '". $uid ."', ". $value .", '0', '". $event ."')");
+		$q = $this->db->query("INSERT INTO Owing (`id_from`, `id_to`, `value`, `status`, `event`) VALUES ('". $toId ."', '". $uid ."', ". $value .", ".$status.", '". $event ."')");
+		
+		// Adding this user to the list if they don't already exist.	
 		$this->load->model('Person');
 		$this->Person->insertRecord($toId);
 		
@@ -58,14 +60,15 @@ class Owing extends CI_Model {
 			return ($this->ObjectToArray($data));	
 	}
 	
-	function deleteRecords($friendID, $uid){
-		$q = $this->db->query("DELETE FROM Owing where id_from = " . $friendID. "AND id_to = ". $uid);
-	}
-	
 	function ObjectToArray($Array){
 		for($i = 0; $i < count($Array); $i++){
 			$Array[$i] = get_object_vars($Array[$i]);
 		}
 		return $Array;
 	}
+
+	function confirmRecord($recordId){
+		$q = this->db->query("UPDATE Owing, SET status = 1 WHERE id = ".$recordId);
+	}
+
 }

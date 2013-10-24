@@ -38,8 +38,8 @@
 
         <!-- MUST GET REAL USERNAME -->
         <!-- Always links to home_view.php -->
-        <a class="navbar-brand" href="../../bookie"><img class = "navbar-image" src="http://graph.facebook.com/<?php echo $user_profile['id']?>/picture" ><?php echo $user_profile['name']; ?></a>
-
+        <a class="navbar-brand" href="../../bookie"><img class = "navbar-top-image" src="http://graph.facebook.com/<?php echo $user_profile['id']?>/picture"><span class = "navbar-text-heading"><?php echo $user_profile['name']; ?></span></a>
+       
         <!-- LOGOUT START -->
         <form action="#">
         <div class="pull-right">
@@ -100,44 +100,6 @@
 			people.push({label: ""+ JSONObject[i].name, id: ""+ JSONObject[i].id, image: "http://graph.facebook.com/" + JSONObject[i].id +"/picture"});
 		}
 	}
-	
-	// function firstMiddleInitial(name)
-  // {
- //     if (name == null || name.length == 0) return "";
-     
- //      //get all tokens (by space) into an array
- //      var arr = name.split(" ");
- //      var newname = "";
- //      for(var i = 0; i < arr.length; i++)
- //      {
- //        if (i == 0)
- //        {
- //          newname += arr[i];
- //        }
- //        else if (i == 1)
- //        {
- //          //special case for Zain A. versus Vadim "Tony" S.
- //          if (arr.length == 2)
- //          {
- //            newname += " " + arr[i].substring(0, 1) + ".";
- //          }
- //          else
- //          {
- //            newname += " " + arr[i];
- //          }
- //        }
- //        else
- //        {
- //          //just in case
- //          if (arr[i].length == 0) continue;
-
- //          newname += " " + arr[i].substring(0, 1) + ".";
- //        }
- //      }
- //      return newname;
-		//return // the First name, the middle name if it exists and the Initial of the last name		
-	//}
-	
 
 	tokenize_json(stringlist); 
 

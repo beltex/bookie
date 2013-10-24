@@ -41,19 +41,17 @@ class AddNewExpense extends CI_Controller {
 		$event = $this->input->get('event');
 		$amount = $this->input->get('amount');
 		$who = $this->input->get("Who");
+		$status = 0; // Status 0 means no decesion has been made yet.
 		
 		$fb_config = array('appId' => '570515386348687', 'secret' => '844705f10757e09b10bc16ab1a3ad65e');
 		$this -> load -> library('facebook' , $fb_config);
-			$user = $this -> facebook -> getUser();
+		$user = $this -> facebook -> getUser();
 
 		if ($user){
-			$myStuff = $this -> facebook -> api('/me');
-
-			$myId = $myStuff['id'];
-			$friendId = '502616400';
-			$value = 55.5;
+			$me = $this -> facebook -> api('/me');
+			$myId = $me['id'];
 			$this->load->model('Owing');
-			$this->Owing->insertRecord($myId, $clientID, $amount, $event);
+			$this->Owing->insertNewRecord($myId, $clientID, $amount, $event, $status);
 			redirect('home');
 		} else redirect('login');
 	}
