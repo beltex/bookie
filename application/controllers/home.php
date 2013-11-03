@@ -22,7 +22,9 @@ class home extends CI_Controller {
 
 		if ($user) {
 			$data['logout_url'] = $this -> facebook -> getLogoutUrl();
+			
 			$this->load->model('Owing');
+
 			$amountLended = $this->Owing->getAmountLended($data['user_profile']['id']);
 			$amountOwing = $this->Owing->getAmountOwing($data['user_profile']['id']);
 			
@@ -31,14 +33,15 @@ class home extends CI_Controller {
 			
 			$amountTotalOwed = $this->Owing->getAmountOwedToPeople($data['user_profile']['id']);
 			$sizeOwed = sizeof($amountTotalOwed);
-			
+		
+
 			$data['size_lended'] = $sizeLended;
 			$data['size_owed'] = $sizeOwed;	
 			
 			$data['amount_lended'] = $amountOwing[0]['sum'];
 			$data['amount_owing'] = $amountLended[0]['sum'];;
 			$this -> load -> view('home_view', $data);
-			
+
 		} else {
 			redirect('login');
 		}

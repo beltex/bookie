@@ -68,7 +68,7 @@ class Owing extends CI_Model {
 	}
 
 	function confirmRecord($recordId){
-		$q = this->db->query("UPDATE Owing, SET status = 1 WHERE id = ".$recordId);
+		$q = $this->db->query("UPDATE Owing, SET status = 1 WHERE id = ".$recordId);
 	}
 
 }
