@@ -158,5 +158,9 @@ body {
 	float: right;
 }
 
+.navbar-brand#loginHeader{
+	font-size: 23px;
+    line-height: 43px;
+}
 /*The CSS works fine for Firefox, but from some reason doesn't render dropdown properly in Chrome abd mobile browsers. Look into this in more detail*/
 

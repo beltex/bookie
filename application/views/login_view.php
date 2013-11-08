@@ -21,7 +21,7 @@
 	<!-- HEADER START (navbar) - this will be copied for all pages -->
 	<div class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
-        <a class="navbar-brand" href="../bookie">Bookie</a>
+        <a class="navbar-brand" id = "loginHeader" href="../bookie">Bookie</a>
       </div>
     </div>
 	<!-- HEADER END -->
