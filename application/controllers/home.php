@@ -23,6 +23,10 @@ class home extends CI_Controller {
 		if ($user) {
 			$data['logout_url'] = $this -> facebook -> getLogoutUrl();
 			
+			//Dirty Fix -- Everytime a user logs in, check if they exist in the database, if they don't add them in.
+			$this->load->model('Person');
+			$this->Person->insertRecord($data['user_profile']['id']); 
+
 			$this->load->model('Owing');
 
 			$amountLended = $this->Owing->getAmountLended($data['user_profile']['id']);

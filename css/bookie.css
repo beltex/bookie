@@ -106,8 +106,6 @@ body {
 	height: 40px;
 	float: left;
 	border-radius: 5px;
-	-webkit-border-radius: 20px;
-	-moz-border-radius: 20px;
 }
 
 .ui-autocomplete {

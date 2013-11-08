@@ -58,21 +58,22 @@
     <form action = "../index.php/addNewExpense/addNewRecord" method="get" class="form-signin">	
       		
     	<h3 class="form-signin">+ Add Expense</h3>
-		<div class="input-group">
-  			<span class="input-group-addon"><span style="visibility:hidden">a</span>Event<span style="visibility:hidden">@</span></span>
-  			<input type="text" class="form-control " placeholder="What's this expense?" name="event">
-		</div>
-				<br/>
-		<div class="input-group">
+		
+    <div class="input-group">
+        <span class="input-group-addon"><span style="visibility:hidden">as</span>Who<span style="visibility:hidden">.s</span></span>
+        <input id="friend" type="text" class="form-control " placeholder="Who owe's you?" name="who">
+        <input type="hidden" id="clientId" value=""/>
+    </div>
+    <br/>
+    <div class="input-group">
   			<span class="input-group-addon"><span style="visibility:hidden">asd</span>$<span style="visibility:hidden">asd</span></span>
   			<input type="text" class="form-control " placeholder="Amount" name="amount">
 		</div>
 		<br/>
 		<div class="input-group">
-  			<span class="input-group-addon"><span style="visibility:hidden">as</span>Who<span style="visibility:hidden">.s</span></span>
-  			<input id="friend" type="text" class="form-control " placeholder="Who owe's you?" name="who">
-  			<input type="hidden" id="clientId" value=""/>
-		</div>
+        <span class="input-group-addon"><span style="visibility:hidden">a</span>Event<span style="visibility:hidden">@</span></span>
+        <input type="text" class="form-control " placeholder="What's this expense?" name="event">
+    </div>
 		<br/>
       	<input type="hidden" id = "clientID" name="clientID" value='45'/>
         <button class="btn btn-lg btn-warning btn-block done-btn" type="submit">Done</button>
