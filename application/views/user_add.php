@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
   <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
   <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+  <script type="text/javascript" src = "<?php echo base_url() ?>js/bookie.js"></script>
 
   <!-- Custom styles for Bookie -->
   <link href="<?php echo base_url() ?>css/bookie.css" rel="stylesheet">
@@ -55,7 +56,7 @@
 
     <!-- CONTAINER START - main body -->
     <div class="container">
-    <form action = "../index.php/addNewExpense/addNewRecord" method="get" class="form-signin">	
+    <form action = "../index.php/addNewExpense/addNewRecord" method="get" class="form-signin" onsubmit = "return validateInput()">
       		
     	<h3 class="form-signin">+ Add Expense</h3>
 		
@@ -67,15 +68,15 @@
     <br/>
     <div class="input-group">
   			<span class="input-group-addon"><span style="visibility:hidden">asd</span>$<span style="visibility:hidden">asd</span></span>
-  			<input type="text" class="form-control " placeholder="Amount" name="amount">
+  			<input id = "amount" type="text" class="form-control " placeholder="Amount" name="amount">
 		</div>
 		<br/>
 		<div class="input-group">
         <span class="input-group-addon"><span style="visibility:hidden">a</span>Event<span style="visibility:hidden">@</span></span>
-        <input type="text" class="form-control " placeholder="What's this expense?" name="event">
+        <input id = "transactionEvent" type="text" class="form-control " placeholder="What's this expense?" name="event">
     </div>
 		<br/>
-      	<input type="hidden" id = "clientID" name="clientID" value='45'/>
+      	<input type="hidden" id = "clientID" name="clientID" value='-1'/>
         <button class="btn btn-lg btn-warning btn-block done-btn" type="submit">Done</button>
       </form>
       

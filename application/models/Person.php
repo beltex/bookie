@@ -3,7 +3,7 @@
 class Person extends CI_Model {
 
 	function insertRecord($id) {
-			
+		
 		$q = $this->db->query("SELECT * FROM Person WHERE fb_id = '" . $id ."'");
 		
 		// User exixsts already! do not add.

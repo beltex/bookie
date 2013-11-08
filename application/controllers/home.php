@@ -8,6 +8,7 @@ class home extends CI_Controller {
 
 	function index() {
 		
+
 		$fb_config = array('appId' => '570515386348687', 'secret' => '844705f10757e09b10bc16ab1a3ad65e');
 		$this -> load -> library('facebook', $fb_config);
 		$user = $this -> facebook -> getUser();
@@ -22,7 +23,7 @@ class home extends CI_Controller {
 
 		if ($user) {
 			$data['logout_url'] = $this -> facebook -> getLogoutUrl();
-			
+		
 			//Dirty Fix -- Everytime a user logs in, check if they exist in the database, if they don't add them in.
 			$this->load->model('Person');
 			$this->Person->insertRecord($data['user_profile']['id']); 
@@ -45,7 +46,6 @@ class home extends CI_Controller {
 			$data['amount_lended'] = $amountOwing[0]['sum'];
 			$data['amount_owing'] = $amountLended[0]['sum'];;
 			$this -> load -> view('home_view', $data);
-
 		} else {
 			redirect('login');
 		}

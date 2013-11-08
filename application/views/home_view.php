@@ -16,7 +16,6 @@
     <link href="<?php echo base_url() ?>css/bookie.css" rel="stylesheet">
   </head>
   <!-- HEAD END -->
-
   <!-- BODY START -->
   <body>
 
