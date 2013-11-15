@@ -52,7 +52,7 @@
 
 	<!-- CONTAINER START - main body -->
     <div class="container"> <br/>
-    <h3 class="form-signin"> Owe You: $<?php echo $total_lended ?></h3>	
+    <h3 class="form-signin"> Owe You: $<?php echo round($total_lended,2) ?></h3>	
 
     	<!-- Hack Alert! Pulling off a Nidale-->
       
@@ -60,11 +60,11 @@
 
     <?php $i = 0;?>
     <?php foreach($people_owe_you as $people) :?>
-		<?php echo "<form class='form-signin'><button id = 'person-".$i."'class='btn btn-lg btn-success btn-block' type='button' >". $people['name']  .": $".$people['totals']." &raquo;</button></form>"; ?>
+		<?php echo "<form class='form-signin'><button id = 'person-".$i."'class='btn btn-lg btn-success btn-block' type='button' >". $people['name']  .": $".round($people['totals'],2)." &raquo;</button></form>"; ?>
      <?php echo "<div class='test' id = 'test-".$i."'>"; ?>
       <?php echo "<table class = 'form-signin' border = '1px'>" ?>
        <?php foreach($debtbyEvent[$i] as $debt) :?>    
-        <?php echo "<tr> <td width = '70px'>".substr($debt['timestamp'],0,11)."</td><td width='130px'>".$debt['event']."</td><td width='60px'></b> $".$debt['value']."</td><tr>";?>
+        <?php echo "<tr> <td width = '90px'>".substr($debt['timestamp'],0,11)."</td><td width='130px'>".$debt['event']."</td><td width='60px'></b> $".round($debt['value'],2)."</td><tr>";?>
        <?php endforeach; ?>  
        <?php echo "</table>"; ?>
     <?php echo "</div>";?> 

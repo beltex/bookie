@@ -9,6 +9,12 @@
 	<!-- MUST GET REAL USERNAME -->
     <title>Bookie // <?php echo $user_profile['name']; ?></title>
 
+    <!-- Loading JS Libraries -->
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+  <script type="text/javascript" src = "<?php echo base_url() ?>js/bookie.js"></script>  
+
     <!-- Bootstrap core CSS - DO NOT TOUCH THIS -->
     <link href="<?php echo base_url() ?>dist/css/bootstrap.css" rel="stylesheet">
     
@@ -44,11 +50,20 @@
 
 	<!-- CONTAINER START - main body -->
     <div class="container"><br/>
-    	<h3 class="form-signin">You Owe: $<?php echo $total_owed ?> </h3>
+    	<h3 class="form-signin">You Owe: $<?php echo round($total_owed,2) ?> </h3>
        <!-- Hack Alert! Pulling off a Nidale-->
+      <?php $i = 0;?>
       <?php foreach($people_you_owe as $people) :?>
-		<?php echo "<form class='form-signin' action='#'><button class='btn btn-lg btn-danger btn-block' type='submit' action='user_add.php'>". $people['name']  .": $".$people['totals']." &raquo;</button></form> " ?>
-	  <?php endforeach; ?>
+		  <?php echo "<form class='form-signin'><button id = 'person-".$i."' class='btn btn-lg btn-danger btn-block' type='button' action='user_add.php'>". $people['name']  .": $".round($people['totals'],2)." &raquo;</button></form> " ?>
+	     <?php echo "<div class='test' id = 'test-".$i."'>"; ?>
+      <?php echo "<table class = 'form-signin' border = '1px'>" ?>
+       <?php foreach($debtbyEvent[$i] as $debt) :?>    
+        <?php echo "<tr> <td width = '90px'>".substr($debt['timestamp'],0,11)."</td><td width='130px'>".$debt['event']."</td><td width='60px'></b> $".round($debt['value'],2)."</td><tr>";?>
+       <?php endforeach; ?>  
+       <?php echo "</table>"; ?>
+    <?php echo "</div>";?> 
+    <?php $i = $i + 1;?> 
+    <?php endforeach; ?>
     </div>
 	<!-- CONTAINER END -->
 
@@ -56,4 +71,19 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
   </body>
+
+<style type="text/css">
+.test{
+  display: none;
+}
+</style>  
+
+<script>
+  $(document).find("button[id^='person-']").click(function(){
+    var num = this.id.split('-')[1];
+    $('#test-' + num).slideToggle("fast");
+  });
+</script>
+
+
 </html>

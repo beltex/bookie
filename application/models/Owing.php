@@ -92,4 +92,28 @@ class Owing extends CI_Model {
 		if(isset($finalData))
 			return $finalData;
 	}
+
+	function getIndividualTransactionsOwed($uid){
+
+		$q1 = $this->db->query("Select Person.fb_id, Person.name AS totals FROM Person INNER JOIN Owing ON Person.fb_id = Owing.id_to WHERE Owing.id_from =".$uid." GROUP BY Owing.id_to ORDER BY Person.name");
+		 
+		 if ($q1->num_rows > 0) {
+			foreach ($q1->result() as $row) {
+				$q2= $this->db->query("Select id_from, value, timestamp, event FROM Owing WHERE id_from =".$uid." AND id_to =".$row->fb_id." ORDER BY timestamp");
+				foreach ($q2->result() as $finalRow){
+					$data[] = $finalRow;
+				}
+				
+				$finalData[] = $this->ObjectToArray($data);
+				unset($data);
+				unset($q2);
+				
+				}
+			}
+			
+		if(isset($finalData))
+			return $finalData;
+	}
+
+
 }

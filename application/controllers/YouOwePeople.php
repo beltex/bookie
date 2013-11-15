@@ -32,6 +32,7 @@ class YouOwePeople extends CI_Controller {
 			$size = sizeof($PeopleYouOweAll);
 			$data['people_you_owe'] = $PeopleYouOweAll;
 			$data['size'] = $size;
+			$data['debtbyEvent'] = $this->Owing->getIndividualTransactionsOwed($data['user_profile']['id']);
 			$this->load->view("user_you_owe", $data);
 			
 		} else {
