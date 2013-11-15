@@ -30,7 +30,8 @@ class PeopleOweYou extends CI_Controller {
 			$totalLendedMoney = $this->Owing->getAmountOwing($data['user_profile']['id']);
 			$data['total_lended'] = $totalLendedMoney[0]['sum'];
 			$data['people_owe_you'] = $this->Owing->getAmountLendedToPeople($data['user_profile']['id']);
-			
+
+			$data['debtbyEvent'] = $this->Owing->getIndividualTransactionsLended($data['user_profile']['id']);
 			$this->load->view("user_owe_me", $data);
 			
 		} else {

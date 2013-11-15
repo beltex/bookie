@@ -37,7 +37,7 @@ class Owing extends CI_Model {
 	
 	function getAmountLendedToPeople($uid){
 		
-		$q = $this->db->query("Select P.fb_id, P.name, sum(P2.value) as totals from Person as P inner join (SELECT O.id_from, O.value from Person as P1 inner join Owing as O on P1.fb_id = O.id_to where P1.fb_id ='".$uid."') as P2 where P.fb_id = P2.id_from GROUP BY P.name");
+		$q = $this->db->query("Select Person.fb_id, Person.name, sum( Owing.value ) AS totals FROM Person INNER JOIN Owing ON Person.fb_id = Owing.id_from WHERE Owing.id_to = ".$uid." GROUP BY Owing.id_from ORDER BY Person.name");
 		if ($q->num_rows > 0) {
 			foreach ($q->result() as $row) {
 				$data[] = $row;
@@ -49,7 +49,7 @@ class Owing extends CI_Model {
 	
 	function getAmountOwedToPeople($uid){
 		
-		$q = $this->db->query("Select P.name, sum(P2.value) as totals from Person as P inner join (SELECT O.id_to, O.value from Person as P1 inner join Owing as O on P1.fb_id = O.id_from where P1.fb_id = '" . $uid ."') as P2 where P.fb_id = P2.id_to GROUP BY P.name");
+		$q = $this->db->query("Select Person.fb_id, Person.name, sum( Owing.value ) AS totals FROM Person INNER JOIN Owing ON Person.fb_id = Owing.id_to WHERE Owing.id_from =".$uid." GROUP BY Owing.id_to ORDER BY Person.name");
 		if ($q->num_rows > 0) {
 			foreach ($q->result() as $row) {
 				$data[] = $row;
@@ -71,4 +71,25 @@ class Owing extends CI_Model {
 		$q = $this->db->query("UPDATE Owing, SET status = 1 WHERE id = ".$recordId);
 	}
 
+	// Too sleepy, better phrase this query.
+	function getIndividualTransactionsLended($uid){
+
+		$q1 = $this->db->query("Select Person.fb_id, Person.name AS totals FROM Person INNER JOIN Owing ON Person.fb_id = Owing.id_from WHERE Owing.id_to =".$uid." GROUP BY Owing.id_from ORDER BY Person.name");
+		 
+		 if ($q1->num_rows > 0) {
+			foreach ($q1->result() as $row) {
+				$q2= $this->db->query("Select id_from, value, timestamp, event FROM Owing WHERE id_to =".$uid." AND id_from =".$row->fb_id." ORDER BY timestamp");
+				foreach ($q2->result() as $finalRow){
+					$data[] = $finalRow;
+				}
+				
+				$finalData[] = $this->ObjectToArray($data);
+				unset($data);
+				unset($q2);
+				
+				}
+			}
+		if(isset($finalData))
+			return $finalData;
+	}
 }

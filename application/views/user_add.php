@@ -20,11 +20,6 @@
   <!-- Custom styles for Bookie -->
   <link href="<?php echo base_url() ?>css/bookie.css" rel="stylesheet">
 
-   <style>
-   
-</style>
-
-
   </head>
   <!-- HEAD END -->
 
