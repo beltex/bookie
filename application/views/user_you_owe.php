@@ -56,9 +56,9 @@
       <?php foreach($people_you_owe as $people) :?>
 		  <?php echo "<form class='form-signin'><button id = 'person-".$i."' class='btn btn-lg btn-danger btn-block' type='button' action='user_add.php'>". $people['name']  .": $".round($people['totals'],2)." &raquo;</button></form> " ?>
 	     <?php echo "<div class='test' id = 'test-".$i."'>"; ?>
-      <?php echo "<table class = 'form-signin' border = '1px'>" ?>
+      <?php echo "<table class = 'form-signin dropdownTable' border = '1px'" ?>
        <?php foreach($debtbyEvent[$i] as $debt) :?>    
-        <?php echo "<tr> <td width = '90px'>".substr($debt['timestamp'],0,11)."</td><td width='130px'>".$debt['event']."</td><td width='60px'></b> $".round($debt['value'],2)."</td><tr>";?>
+        <?php echo "<tr id = 'dropDownTableRow'> <td width = '90px' align = 'center'>".substr($debt['timestamp'],0,11)."</td><td  align = 'center' width='130px'>".$debt['event']."</td><td id = 'lastRow' align = 'right' width='60px'></b> $".round($debt['value'],2)."</td><tr>";?>
        <?php endforeach; ?>  
        <?php echo "</table>"; ?>
     <?php echo "</div>";?> 
@@ -84,6 +84,5 @@
     $('#test-' + num).slideToggle("fast");
   });
 </script>
-
 
 </html>
