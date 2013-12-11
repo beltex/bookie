@@ -8,7 +8,7 @@ class Login extends CI_Controller {
 
 	function index() {
 
-		$fb_config = array('appId' => '570515386348687', 'secret' => '844705f10757e09b10bc16ab1a3ad65e');
+		$fb_config = array('appId' => '245822572241036', 'secret' => '4207143beadd507759999a2771729087');
 		$this -> load -> library('facebook', $fb_config);
 		$user = $this -> facebook -> getUser();
 
