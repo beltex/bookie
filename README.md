@@ -26,3 +26,11 @@ U of T Hackathon 2013 hack.
 ### Why is it called Bookie?
 
 Because LoneMe (and its many variations) sounds sleazy, and Turnip or Radish would continue the long line of fruits & vegetables.
+
+### Working Localhost
+
+To work localhost (or any custom base URL for that matter) update the following in application/config/config.php
+
+ ```php
+$config['base_url']	= 'http://<HOST_NAME_OR_IP>:8888/bookie';
+ ```
