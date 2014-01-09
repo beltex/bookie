@@ -1,6 +1,8 @@
 Bookie
 ======
 
+QA Url - http://bookieqa.cloudapp.net/bookie
+
 ### What
 
 Bookie is a social finance tracking web app for desktop & mobile that hooks into the Facebook API. Wanna keep track of that coffee your friend owes you? How about that steak dinner last week, or those Leafs tickets? Bookie makes it seamless to keep track of who owes you money, and who you owe.
