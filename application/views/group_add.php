@@ -43,30 +43,31 @@
 
 	<!-- CONTAINER START - main body -->
     <div class="container">
-    	
-    	<br/>
-    	
-    	<h3 class="form-signin">Your Social Bookie</h3>
-    	
-      <form class="form-signin" action="../index.php/addNewExpense">
-        
-		<button class="btn btn-lg btn-warning btn-block" type="submit" >+ Add Expense</button>
+    	<br/>	
+    	<h3 class="form-signin">+ New Group</h3>
+
+      <form action = "../index.php/addNewExpense/addNewRecord" method="get" class="form-signin">
+      
+        <div class="input-group">
+            <span class="input-group-addon"><span style="visibility:hidden">a</span>Name<span style="visibility:hidden">@</span></span>
+            <input id = "transactionEvent" type="text" class="form-control " placeholder="Group Name" name="event">
+        </div>
+        <br/>
+        <div class="input-group">
+            <span class="input-group-addon"><span style="visibility:hidden">as</span>Desc<span style="visibility:hidden">.s</span></span>
+            <input id="friend" type="text" class="form-control " placeholder="Group Description" name="who">
+            <input type="hidden" id="clientId" value=""/>
+        </div>
+        <br/>
+        <div class="input-group">
+            <span class="input-group-addon"><span style="visibility:hidden">asd</span>P<span style="visibility:hidden">asd</span></span>
+            <input id = "amount" type="text" class="form-control " placeholder="Group Members" name="amount">
+        </div>
+        <br/>
+        <input type="hidden" id = "clientID" name="clientID" value='-1'/>
+        <button class="btn btn-lg btn-warning btn-block done-btn" type="submit">Done</button>
       </form>
-      <form class="form-signin" action="../index.php/YouOwePeople">
-      	<?php if($size_owed < 1) 
-      			echo "<button class='btn btn-lg btn-danger btn-block' type='submit' disabled><span class='badge pull-right notes'>$size_owed</span>You Owe: $0 &raquo;</button>";
-			else echo "<button class='btn btn-lg btn-danger btn-block' type='submit'><span class='badge pull-right notes'>$size_owed</span>You Owe: $".round($amount_owing,2)." &raquo;</button>";
-      	?>
-	  </form>
-      <form class="form-signin" action="../index.php/PeopleOweYou">
-      	<?php if($size_lended < 1) 
-				echo "<button class='btn btn-lg btn-success btn-block text-left' type='submit' disabled><span class='badge pull-right notes'> $size_lended </span>Owe You: $0 &raquo;</button>";
-			else echo "<button class='btn btn-lg btn-success btn-block text-left' type='submit' ><span class='badge pull-right notes'> $size_lended </span>Owe You: $".round($amount_lended,2)." &raquo;</button>"; 
-      	?>
-      </form>
-      <form class="form-signin" action="../index.php/groups">
-       <?php echo "<button class='btn btn-lg btn-groups btn-block text-left' type='submit'> Groups &raquo;</button>";?>
-      </form>
+    
     </div>
 	<!-- CONTAINER END -->
 

@@ -165,11 +165,26 @@ body {
 
 #dropDownTableRow{
 	font-size: 15px;
-
 }
 
 #lastRow{
 	padding-right: 5px;
+}
+
+.btn-groups{
+	background-color: #5000FF;
+	border-color: #5000FF;
+	color: white;
+}
+
+.btn-groups:hover,
+.btn-groups:focus,
+.btn-groups:active,
+.btn-groups.active,
+.open .dropdown-toggle.btn-groups {
+  color: #ffffff;
+  background-color: #0000FF;
+  border-color: #d58512;
 }
 /*The CSS works fine for Firefox, but from some reason doesn't render dropdown properly in Chrome abd mobile browsers. Look into this in more detail*/
 
