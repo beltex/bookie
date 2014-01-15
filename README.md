@@ -19,6 +19,7 @@ Bookie is a social finance tracking web app for desktop & mobile that hooks into
 
 ##### Front-end
 - JavaScript
+- jQuery
 - HTML
 - CSS
 - Twitter Bootstrap 3.0
