@@ -14,7 +14,7 @@
 | path to your installation.
 |
 */
-$config['base_url']	= 'http://10.24.2.37:8888/bookie';
+$config['base_url']	= 'http://localhost:8888/bookie';
 /*$config['base_url'] = 'put the url here'*/
 
 

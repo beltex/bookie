@@ -7,8 +7,7 @@ class AddNewExpense extends CI_Controller {
 	}
 
 	function index() {
-		$fb_config = array('appId' => '570515386348687', 'secret' => '844705f10757e09b10bc16ab1a3ad65e');
-		$this -> load -> library('facebook', $fb_config);
+
 		$user = $this -> facebook -> getUser();
 
 		if ($user) {
@@ -43,8 +42,6 @@ class AddNewExpense extends CI_Controller {
 		$who = $this->input->get("Who");
 		$status = 0; // Status 0 means no decesion has been made yet.
 		
-		$fb_config = array('appId' => '570515386348687', 'secret' => '844705f10757e09b10bc16ab1a3ad65e');
-		$this -> load -> library('facebook' , $fb_config);
 		$user = $this -> facebook -> getUser();
 
 		if ($user){
