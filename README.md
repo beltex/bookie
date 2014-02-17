@@ -1,7 +1,7 @@
 Bookie
 ======
 
--- Project isn't complete and is still being developed -- 
+-- Work In Progress -- 
 
  ![Bookie Image](/BookieIMG.png "Bookie")
 
