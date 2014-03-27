@@ -1,9 +1,11 @@
 Bookie
 ======
 
--- Work In Progress -- 
-
  ![Bookie Image](/BookieIMG.png "Bookie")
+
+### Origin
+
+UofT Hacks (UofT Hackathon 2013)
 
 ### What
 
@@ -23,10 +25,6 @@ Bookie is a social finance tracking web app for desktop & mobile that hooks into
 - HTML
 - CSS
 - Twitter Bootstrap 3.0
-
-### Origin
-
-UofT Hacks (UofT Hackathon 2013).
 
 ### Why is it called Bookie?
 
