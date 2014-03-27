@@ -26,7 +26,7 @@ Bookie is a social finance tracking web app for desktop & mobile that hooks into
 
 ### Origin
 
-U of T Hackathon 2013 hack.
+UofT Hacks (UofT Hackathon 2013).
 
 ### Why is it called Bookie?
 
